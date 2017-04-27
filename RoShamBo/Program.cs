@@ -6,14 +6,18 @@ namespace RoShamBo
     {
         static void Main(string[] args)
         {
+            int humanScore = 0;
+            int compScore = 0;
+
             Console.WriteLine("Would you like to play RoShamBo? Enter Yes or No.");
             string wantToPlay = Console.ReadLine().ToLower();
 
             startGame:
             if (wantToPlay == "yes")
             {
+
                 Console.WriteLine("Make a selection:  r for rock, p for paper, s for scissors");
-                string playersChoice = Console.ReadLine();
+                string playersChoice = Console.ReadLine().ToLower();
 
                 makeSelection:
 
@@ -34,15 +38,19 @@ namespace RoShamBo
                         case -1:
                             {
                                 Console.WriteLine("The Computer Wins");
+                                compScore ++;
                                 break;
                             }
                         case 1:
                             {
                                 Console.WriteLine("You win");
+                                humanScore ++;
                                 break;
                             }
 
                     }
+                    Console.WriteLine("Score is You = {0} and the Machine = {1}", humanScore, compScore);
+
                     Console.WriteLine("Would you like to play again?");
                     wantToPlay = Console.ReadLine().ToLower();
 
