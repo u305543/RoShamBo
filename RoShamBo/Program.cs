@@ -50,6 +50,18 @@ namespace RoShamBo
 
                     }
                     Console.WriteLine("Score is You = {0} and the Machine = {1}", humanScore, compScore);
+                    if (humanScore > compScore)
+                    {
+                        Console.WriteLine("Keep beating the machine");
+                    }
+                    else if (compScore> humanScore)
+                    {
+                        Console.WriteLine("You are getting your ass handed to you!!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Can someone go ahead alread, geez");
+                    }
 
                     Console.WriteLine("Would you like to play again?");
                     wantToPlay = Console.ReadLine().ToLower();
