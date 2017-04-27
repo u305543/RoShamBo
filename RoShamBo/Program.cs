@@ -60,7 +60,7 @@ namespace RoShamBo
                     }
                     else
                     {
-                        Console.WriteLine("Can someone go ahead alread, geez");
+                        Console.WriteLine("Can someone go ahead already, geez");
                     }
 
                     Console.WriteLine("Would you like to play again?");
